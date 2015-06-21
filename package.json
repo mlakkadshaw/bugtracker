@@ -1,0 +1,25 @@
+{
+  "name": "buildsystem",
+  "version": "1.0.0",
+  "description": "Using npm as build tool",
+  "main": "index.js",
+  "scripts": {
+    "lint": "jshint **.js --exclude ./build/",
+    "package": "browserify build/app.js > build/bundle.js -d",
+    "react": "jsx js/ build/",
+    "start": "http-server",
+    "build": "npm run react && npm run package",
+    "build:watch": "watch 'npm run build' ./js"
+  },
+  "author": "Mohammed Lakkadshaw",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^10.2.4",
+    "jshint": "^2.8.0",
+    "watch": "^0.16.0"
+  },
+  "dependencies": {
+    "flux": "^2.0.3",
+    "markdown": "^0.5.0"
+  }
+}
