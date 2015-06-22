@@ -32,12 +32,18 @@ var BugVersion = React.createClass({
 	render: function() {
 		return (
 			<div>
-			App Version: <input onChange={this._updateVersionName } type="text" />
-			<br />
-			Description: <textarea onChange={this._updateChangelog}></textarea>
-			<br />
-			<div dangerouslySetInnerHTML={{__html: this.state.changeLog }}></div>
-			<button onClick={this._onSave}>Save</button>
+			<div className='appControls'>
+				App Version:
+				<br />
+				<input onChange={this._updateVersionName } type="text" />
+				<br />
+				Description:
+				<br />
+				<textarea rows="5" onChange={this._updateChangelog}></textarea>
+				<br/>
+				<button onClick={this._onSave}>Save</button>
+			</div>
+			<div className="preview" dangerouslySetInnerHTML={{__html: this.state.changeLog }}></div>
 			</div>
 			)
 	}

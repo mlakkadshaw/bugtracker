@@ -32,18 +32,12 @@ var BugVersion = React.createClass({displayName: "BugVersion",
 	render: function() {
 		return (
 			React.createElement("div", null, 
-			React.createElement("div", {className: "appControls"}, 
-				"App Version:", 
-				React.createElement("br", null), 
-				React.createElement("input", {onChange: this._updateVersionName, type: "text"}), 
-				React.createElement("br", null), 
-				"Description:", 
-				React.createElement("br", null), 
-				React.createElement("textarea", {rows: "5", onChange: this._updateChangelog}), 
-				React.createElement("br", null), 
-				React.createElement("button", {onClick: this._onSave}, "Save")
-			), 
-			React.createElement("div", {className: "preview", dangerouslySetInnerHTML: {__html: this.state.changeLog}})
+			"App Version: ", React.createElement("input", {onChange: this._updateVersionName, type: "text"}), 
+			React.createElement("br", null), 
+			"Description: ", React.createElement("textarea", {onChange: this._updateChangelog}), 
+			React.createElement("br", null), 
+			React.createElement("div", {className: "preview", dangerouslySetInnerHTML: {__html: this.state.changeLog}}), 
+			React.createElement("button", {onClick: this._onSave}, "Save")
 			)
 			)
 	}

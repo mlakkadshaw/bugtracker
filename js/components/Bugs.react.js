@@ -34,8 +34,7 @@ var Bugs = React.createClass({
 			bugLists.push(
 				<div>
 				<h3>Version: {key}</h3>
-				<div>
-					{appVersions[key].changeLog}
+				<div dangerouslySetInnerHTML={{__html: appVersions[key].changeLog }}>				
 				</div>
 				<br />
 				<BugList key={key} appVersion={appVersions[key]} />

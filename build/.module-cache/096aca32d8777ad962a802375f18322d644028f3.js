@@ -39,7 +39,7 @@ var BugVersion = React.createClass({displayName: "BugVersion",
 				React.createElement("br", null), 
 				"Description:", 
 				React.createElement("br", null), 
-				React.createElement("textarea", {rows: "5", onChange: this._updateChangelog}), 
+				React.createElement("textarea", {onChange: this._updateChangelog}), 
 				React.createElement("br", null), 
 				React.createElement("button", {onClick: this._onSave}, "Save")
 			), 
