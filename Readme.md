@@ -5,13 +5,17 @@ Bug Tracker as the name suggests is a bug tracking application built using React
 ## Building the project Project
 
 1. Install the dependencies:
-	npm install
+
+		npm install
 	
 2. Build the Project
-	npm run build
+	
+		npm run build
 	
 
-You can also run:
-	npm run build:watch 
+	
 
-to automatically build the project as you make any changes.
+
+To automatically build the project as you make any changes run:
+
+	npm run build:watch 
